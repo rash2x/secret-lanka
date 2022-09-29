@@ -5,8 +5,8 @@ const GlobalStyles = ({children}) => (
   <Global styles={css`
     @font-face {
       font-family: 'Moniqa Cond Display';
-      src: url('/styles/fonts/Moniqa-CondensedDisplay.woff2') format('woff2'),
-      url('/styles/fonts/Moniqa-CondensedDisplay.woff') format('woff');
+      src: url('/fonts/Moniqa-CondensedDisplay.woff2') format('woff2'),
+      url('/fonts/Moniqa-CondensedDisplay.woff') format('woff');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
@@ -14,8 +14,8 @@ const GlobalStyles = ({children}) => (
 
     @font-face {
       font-family: 'Moniqa Med Paragraph';
-      src: url('/styles/fonts/Moniqa-MediumParagraph.woff2') format('woff2'),
-      url('/styles/fonts/Moniqa-MediumParagraph.woff') format('woff');
+      src: url('/fonts/Moniqa-MediumParagraph.woff2') format('woff2'),
+      url('/fonts/Moniqa-MediumParagraph.woff') format('woff');
       font-weight: 500;
       font-style: normal;
       font-display: swap;

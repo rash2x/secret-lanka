@@ -108,15 +108,15 @@ const Actions = styled.div`
   display: flex;
   margin-top: 32px;
   
-  & > * + * {
-    margin-left: 16px;
+  & > * {
+    margin-right: 16px;
   }
 
   ${props => props.theme.breakpoints.down('sm')} {
     flex-direction: column;
 
-    & > * + * {
-      margin-left: 0;
+    & > * {
+      margin-right: 0;
       margin-top: 8px;
     }
   }

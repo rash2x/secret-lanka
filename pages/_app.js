@@ -1,4 +1,6 @@
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
+import createCache from '@emotion/cache';
+import {CacheProvider} from "@emotion/react";
 
 const theme = createTheme({
   typography: {
@@ -21,12 +23,19 @@ const theme = createTheme({
   }
 })
 
+const cache = createCache({
+  key: 'css',
+  prepend: true,
+});
+
 function MyApp({Component, pageProps}) {
   return <>
-    <ThemeProvider theme={theme}>
-      <CssBaseline/>
-      <Component {...pageProps} />
-    </ThemeProvider>
+      <CacheProvider value={cache}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline/>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </CacheProvider>
   </>
 }
 

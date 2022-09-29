@@ -1,12 +1,8 @@
-import '../styles/globals.css';
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
 
 const theme = createTheme({
   typography: {
-    button: {
-      fontFamily: '"Alumni Sans", sans-serif',
-      fontSize: '2rem'
-    },
+    fontFamily: 'Montserrat, sans-serif',
   },
   palette: {
     mode: 'dark',
@@ -20,22 +16,16 @@ const theme = createTheme({
         root: {
           borderRadius: '32px'
         },
-        sizeLarge: {
-          fontSize: '2rem',
-          lineHeight: 1.25,
-          paddingLeft: 32,
-          paddingRight: 32
-        }
       }
     }
   }
 })
 
-function MyApp({ Component, pageProps }) {
+function MyApp({Component, pageProps}) {
   return <>
     <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Component {...pageProps} />
+      <CssBaseline/>
+      <Component {...pageProps} />
     </ThemeProvider>
   </>
 }
